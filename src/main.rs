@@ -18,14 +18,8 @@ fn main() {
     println!("Please enter the volume for z:");
     input_volume.length_z = input::take_user_input();
 
-    let result: f64 = calculate_value(&mut input_volume.length_x, &mut input_volume.length_y, &mut input_volume.length_z);
+    let result: f64 = volprop::calculate_value(&mut input_volume.length_x, &mut input_volume.length_y, &mut input_volume.length_z);
     print_result(result)
-}
-
-fn calculate_value(val_x: &mut f64, val_y: &mut f64, val_z: &mut f64) -> f64 {
-    let calculated_value: f64 = *val_x * *val_y * *val_z;
-
-    return calculated_value;
 }
 
 fn print_result(result: f64) {
